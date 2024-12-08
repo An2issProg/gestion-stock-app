@@ -1,0 +1,37 @@
+<nav class="bg-purple-800 text-white">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo -->
+    <a href="#" class="text-lg font-bold">Mon Stock</a>
+
+    <!-- Navigation Links -->
+    <ul class="flex space-x-4">
+      <!-- Accueil -->
+      <li>
+        <a [routerLink]="['/theme']" class="hover:text-gray-500">Accueil</a>
+      </li>
+
+      <!-- Articles Dropdown -->
+      <li class="relative group">
+        <a href="#" class="hover:text-gray-300">Articles</a>
+        <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2 rounded">
+          <a href="/add-article" class="block px-4 py-2 hover:bg-gray-400">Ajouter Article</a>
+          <a href="/listeusers" class="block px-4 py-2 hover:bg-gray-400">Lister Users</a>
+        </div>
+      </li>
+    </ul>
+
+    <!-- User Dropdown -->
+    <ul class="flex space-x-4">
+      <li class="relative group">
+        <a href="/login" class="hover:text-gray-600">Profile</a>
+        <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2 rounded">
+          <a href="/login" class="block px-4 py-2 hover:bg-gray-100">Connexion</a>
+          <a href="/register" class="block px-4 py-2 hover:bg-gray-100">Déconnexion</a>
+          <a href="/articles" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

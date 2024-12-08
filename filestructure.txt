@@ -1,0 +1,89 @@
+|-- .angular
+|-- .editorconfig
+|-- .gitignore
+|-- .hintrc
+|-- angular.json
+|-- package-lock.json
+|-- package.json
+|-- public
+    |-- assets
+        |-- article.png
+        |-- calender.png
+        |-- categ.png
+        |-- delete.png
+        |-- dollar.png
+        |-- edit.png
+        |-- interdit.png
+        |-- theme.jpeg
+        |-- user.png
+    |-- favicon.ico
+|-- README.md
+|-- src
+    |-- app
+        |-- add-article
+            |-- add-article.component.css
+            |-- add-article.component.html
+            |-- add-article.component.spec.ts
+            |-- add-article.component.ts
+        |-- app-routing.module.ts
+        |-- app.component.css
+        |-- app.component.html
+        |-- app.component.spec.ts
+        |-- app.component.ts
+        |-- app.module.ts
+        |-- articles
+            |-- articles.component.css
+            |-- articles.component.html
+            |-- articles.component.spec.ts
+            |-- articles.component.ts
+        |-- listeusers
+            |-- listeusers.component.css
+            |-- listeusers.component.html
+            |-- listeusers.component.spec.ts
+            |-- listeusers.component.ts
+        |-- login
+            |-- login.component.css
+            |-- login.component.html
+            |-- login.component.spec.ts
+            |-- login.component.ts
+        |-- model
+            |-- article.model.ts
+            |-- categorie.model.ts
+        |-- models
+            |-- user.model.ts
+        |-- register
+            |-- register.component.css
+            |-- register.component.html
+            |-- register.component.spec.ts
+            |-- register.component.ts
+        |-- service-art
+            |-- article.service.spec.ts
+            |-- article.service.ts
+        |-- services
+            |-- authentification.service.spec.ts
+            |-- authentification.service.ts
+        |-- tailwind.config.js
+        |-- theme
+            |-- theme.component.css
+            |-- theme.component.html
+            |-- theme.component.spec.ts
+            |-- theme.component.ts
+        |-- update-article
+            |-- update-article.component.css
+            |-- update-article.component.html
+            |-- update-article.component.spec.ts
+            |-- update-article.component.ts
+        |-- update-user
+            |-- update-user.component.css
+            |-- update-user.component.html
+            |-- update-user.component.spec.ts
+            |-- update-user.component.ts
+        |-- user.service.spec.ts
+        |-- user.service.ts
+    |-- index.html
+    |-- main.ts
+    |-- styles.css
+|-- tailwind.config.js
+|-- tsconfig.app.json
+|-- tsconfig.json
+|-- tsconfig.spec.json

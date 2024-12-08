@@ -1,0 +1,57 @@
+<div class="container mx-auto mt-6">
+  <div class="bg-white shadow-md rounded-lg">
+    <div class="p-6">
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">Liste des articles</h1>
+      <table class="table-auto w-full border-collapse border border-gray-200">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="px-4 py-2 border border-gray-200 text-left text-gray-600">Code</th>
+            <th class="px-4 py-2 border border-gray-200 text-left text-gray-600">Libellé</th>
+            <th class="px-4 py-2 border border-gray-200 text-left text-gray-600">Catégorie</th>
+            <th class="px-4 py-2 border border-gray-200 text-left text-gray-600">Prix Unitaire</th>
+            <th class="px-4 py-2 border border-gray-200 text-left text-gray-600">Quantité</th>
+            <th class="px-4 py-2 border border-gray-200 text-left text-gray-600">Date insertion</th>
+            <th class="px-4 py-2 border border-gray-200 text-left text-gray-600">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let article of tab_art"
+            class="hover:bg-gray-50"
+          >
+            <td class="px-4 py-2 border border-gray-200">{{ article.codea }}</td>
+            <td class="px-4 py-2 border border-gray-200">{{ article.libelle | uppercase }}</td>
+            <td class="px-4 py-2 border border-gray-200">{{ article.categ.nomCat }}</td>
+            <td class="px-4 py-2 border border-gray-200">{{ article.prix }}</td>
+            <td class="px-4 py-2 border border-gray-200">{{ article.qte }}</td>
+            <td class="px-4 py-2 border border-gray-200">{{ article.dateAjout | date: 'dd/MM/yyyy' }}</td>
+            <td class="px-4 py-2 border border-gray-200 flex space-x-2">
+              <button
+                class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600 flex items-center"
+                (click)="modifArticle(article)"
+              >
+                <img
+                  src="assets/edit.png"
+                  alt="edit"
+                  class="w-4 h-4 mr-1"
+                />
+                Modifier
+              </button>
+              <button
+                class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 flex items-center"
+                (click)="suppArticle(article)"
+              >
+                <img
+                  src="assets/delete.png"
+                  alt="delete"
+                  class="w-4 h-4 mr-1"
+                />
+                Supprimer
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

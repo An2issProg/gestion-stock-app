@@ -1,0 +1,56 @@
+<div class="container mx-auto mt-5 px-4">
+  <div class="flex justify-center">
+    <div class="w-full max-w-md">
+      <div class="bg-white rounded-lg shadow-md">
+        <div class="bg-gray-100 px-4 py-3 rounded-t-lg">
+          <h2 class="text-lg font-bold text-gray-700">Login</h2>
+        </div>
+        <div class="px-6 py-4">
+          <form (ngSubmit)="loginUser()">
+            <!-- Email Input -->
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 text-gray-900"
+                placeholder="Enter email"
+                [(ngModel)]="email"
+                required
+              />
+            </div>
+
+            <!-- Password Input -->
+            <div class="mb-4">
+              <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                placeholder="Password"
+                [(ngModel)]="password"
+                required
+              />
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="w-full bg-purple-600 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
+            >
+              Login
+            </button>
+          </form>
+
+          <!-- Register Link -->
+          <p class="mt-4 text-sm text-black-800 text-center">
+                Don't have an account?
+            <a [routerLink]="['/register']" class="text-purple-800 hover:underline">Register</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

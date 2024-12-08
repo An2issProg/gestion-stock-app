@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <!-- Check if there are users -->
+  <div *ngIf="users.length > 0; else noUsers">
+    <h3 class="text-center text-xl font-semibold mb-4">Liste des utilisateurs</h3>
+
+    <ul class="list-group">
+      <!-- Loop through each user -->
+      <li *ngFor="let user of users" class="list-group-item flex justify-between items-center p-4 mb-2 border rounded-lg shadow-md">
+        <div>
+          <strong>Nom:</strong> {{user.username}} <br>
+          <strong>Email: </strong> {{user.email}} <br>
+          <strong>Role:</strong> {{user.role}}
+        </div>
+        <div class="flex space-x-2">
+          <!-- Button to modify the user -->
+          <button class="bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-400" [routerLink] ="['/users/update', user._id]" aria-label="Modifier l'utilisateur">
+            Modifier
+          </button>
+          <!-- Button to delete the user -->
+          <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-red-300" (click)="onDeleteUser(user._id)">
+            Supprimer
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Template if no users are found -->
+  <ng-template #noUsers>
+    <div class="alert alert-warning text-center p-4 bg-yellow-100 text-yellow-800 rounded-md">
+      Aucun utilisateur trouvé.
+    </div>
+  </ng-template>
+
+</div>

@@ -1,0 +1,104 @@
+<div class="container mx-auto mt-6">
+  <div>
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Ajouter un article</h2>
+  </div>
+
+  <!-- Formulaire pour ajouter un article -->
+  <form (ngSubmit)="addArticle()" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Code Article -->
+    <div class="flex flex-col">
+      <label for="codea" class="text-sm font-medium text-gray-600">Code article</label>
+      <input
+        type="number"
+        id="codea"
+        [(ngModel)]="newArticle.codea"
+        name="codea"
+        class="mt-1 border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+        required
+      />
+    </div>
+
+    <!-- Libellé -->
+    <div class="flex flex-col">
+      <label for="libelle" class="text-sm font-medium text-gray-600">Libellé</label>
+      <input
+        type="text"
+        id="libelle"
+        [(ngModel)]="newArticle.libelle"
+        name="libelle"
+        class="mt-1 border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+        required
+      />
+    </div>
+
+    <!-- Catégorie -->
+    <div class="flex flex-col">
+      <label for="category" class="text-sm font-medium text-gray-600">Catégorie</label>
+      <select
+        id="codec"
+        name="codec"
+        [(ngModel)]="newcodec"
+        class="mt-1 border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+      >
+        <option *ngFor="let cat of categories" [value]="cat.codec">
+          {{ cat.nomCat }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Prix -->
+    <div class="flex flex-col">
+      <label for="prix" class="text-sm font-medium text-gray-600">Prix</label>
+      <input
+        type="number"
+        id="prix"
+        [(ngModel)]="newArticle.prix"
+        name="prix"
+        class="mt-1 border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+        required
+      />
+    </div>
+
+    <!-- Quantité -->
+    <div class="flex flex-col">
+      <label for="qte" class="text-sm font-medium text-gray-600">Quantité</label>
+      <input
+        type="number"
+        id="qte"
+        [(ngModel)]="newArticle.qte"
+        name="qte"
+        class="mt-1 border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+        required
+      />
+    </div>
+
+    <!-- Date de création -->
+    <div class="flex flex-col">
+      <label for="dateAjout" class="text-sm font-medium text-gray-600">Date création</label>
+      <input
+        type="date"
+        id="dateAjout"
+        [(ngModel)]="newArticle.dateAjout"
+        name="dateAjout"
+        class="mt-1 border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+        required
+      />
+    </div>
+
+    <!-- Bouton Ajouter -->
+    <div class="mt-4 col-span-full flex justify-end">
+      <button
+        type="submit"
+        id="btn"
+        class="bg-green-600 text-white px-6 py-2 rounded-md shadow hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+      >
+        Ajouter
+      </button>
+    </div>
+  </form>
+
+  <!-- Section Articles -->
+  <div class="mt-8">
+    <app-articles></app-articles>
+  </div>
+</div>
